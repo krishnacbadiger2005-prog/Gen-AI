@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Quiz Generator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page-shell">
+    <section class="hero-card">
+      <div class="hero-copy">
+        <p class="eyebrow">AI Quiz Generator</p>
+        <h1>Python MCQ Challenge</h1>
+        <p class="hero-text">
+          Test your Python basics with a 10-question multiple-choice quiz. Pick the best answer for each question and see your score instantly.
+        </p>
+      </div>
+      <div class="hero-badge">
+        <span>1 Quiz</span>
+        <strong>10 Questions</strong>
+      </div>
+    </section>
+
+    <section class="generator-panel">
+      <div class="panel-head">
+        <div>
+          <p class="eyebrow">Generated Quiz</p>
+          <h2>Python Fundamentals</h2>
+        </div>
+        <button id="start-btn" class="primary-btn" type="button">Start Quiz</button>
+      </div>
+
+      <div id="quiz-meta" class="quiz-meta">
+        <span id="question-counter">Question 1 of 10</span>
+        <span id="score-counter">Score: 0</span>
+      </div>
+
+      <div id="quiz-box" class="quiz-box hidden">
+        <h3 id="question-text"></h3>
+        <div id="answer-list" class="answer-list"></div>
+        <div class="quiz-actions">
+          <button id="next-btn" class="secondary-btn" type="button">Next Question</button>
+        </div>
+      </div>
+
+      <div id="result-box" class="result-box hidden">
+        <p class="eyebrow">Quiz Complete</p>
+        <h3 id="result-title"></h3>
+        <p id="result-text"></p>
+        <button id="restart-btn" class="primary-btn" type="button">Try Again</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
