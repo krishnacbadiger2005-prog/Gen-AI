@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Quiz Generator | Python MCQ Challenge</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page-shell">
+    <section class="hero-card">
+      <div class="hero-copy">
+        <p class="eyebrow">AI Quiz Generator</p>
+        <h1>Python MCQ Quiz in 10 Smart Questions</h1>
+        <p class="hero-text">
+          Practice Python fundamentals with an AI-inspired quiz experience. Start one quiz, answer 10 multiple-choice questions, and get your score instantly.
+        </p>
+        <div class="hero-actions">
+          <button id="start-quiz-btn" class="primary-btn" type="button">Start Python Quiz</button>
+          <span class="hero-note">Level: Beginner to Intermediate</span>
+        </div>
+      </div>
+
+      <aside class="hero-badge">
+        <span>Quiz Pack</span>
+        <strong>01</strong>
+        <p>Python | 10 Questions | Instant Result</p>
+      </aside>
+    </section>
+
+    <section class="quiz-panel">
+      <div class="panel-head">
+        <div>
+          <p class="eyebrow">Generated Quiz</p>
+          <h2>Python Multiple Choice Challenge</h2>
+        </div>
+        <div class="panel-meta">
+          <span id="progress-text">Question 1 / 10</span>
+          <span id="score-text">Score 0</span>
+        </div>
+      </div>
+
+      <div class="quiz-layout">
+        <section class="quiz-card" aria-labelledby="question-title">
+          <div class="question-top">
+            <span class="question-tag">Active Question</span>
+            <div class="progress-track" aria-hidden="true">
+              <div id="progress-bar" class="progress-bar"></div>
+            </div>
+          </div>
+
+          <h3 id="question-title" class="question-title"></h3>
+          <div id="options-list" class="options-list"></div>
+          <div id="answer-explanation" class="answer-explanation hidden"></div>
+
+          <div class="quiz-actions">
+            <button id="next-btn" class="primary-btn" type="button">Next Question</button>
+            <button id="restart-btn" class="secondary-btn" type="button">Restart Quiz</button>
+          </div>
+          <p id="quiz-status" class="quiz-status" aria-live="polite"></p>
+        </section>
+
+        <aside class="summary-card">
+          <p class="eyebrow">Quiz Summary</p>
+          <div class="summary-grid">
+            <article>
+              <span>Topic</span>
+              <strong>Python Basics</strong>
+            </article>
+            <article>
+              <span>Total Questions</span>
+              <strong>10</strong>
+            </article>
+            <article>
+              <span>Question Type</span>
+              <strong>MCQ</strong>
+            </article>
+            <article>
+              <span>Goal</span>
+              <strong>Test Core Concepts</strong>
+            </article>
+          </div>
+          <div class="summary-note">
+            <p>Answer feedback appears instantly after each click.</p>
+            <p>Finish the quiz to open a score board with full right and wrong answer explanations.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <div id="result-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="result-title">
+    <div class="modal-backdrop" data-close-modal="true"></div>
+    <div class="modal-panel">
+      <button id="close-modal-btn" class="modal-close" type="button" aria-label="Close result popup">&times;</button>
+
+      <section class="result-popup-card">
+        <p class="popup-label">Your Result</p>
+        <div class="result-orb">
+          <strong id="result-score-value">0</strong>
+          <span>of 100</span>
+        </div>
+        <h3 id="result-title">Great</h3>
+        <p id="result-message" class="result-message"></p>
+      </section>
+
+      <section class="report-card">
+        <div class="report-head">
+          <div>
+            <p class="eyebrow">Answer Report</p>
+            <h3>Detailed Right and Wrong Explanation</h3>
+          </div>
+          <button id="restart-from-modal-btn" class="secondary-btn" type="button">Try Again</button>
+        </div>
+        <div id="answer-report-list" class="answer-report-list"></div>
+      </section>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
